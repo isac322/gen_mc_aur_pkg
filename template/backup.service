@@ -1,0 +1,12 @@
+[Unit]
+Description=Minecraft ${mc_ver} ${srv_type} Server World Backup
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/${daemon_name} backup
+User=${srv_id}
+Group=${srv_id}
+
+[Install]
+WantedBy=multi-user.target

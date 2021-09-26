@@ -1,0 +1,13 @@
+[Unit]
+Description=Minecraft ${mc_ver} ${srv_type} Server
+After=local-fs.target network.target multi-user.target
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/${daemon_name} start
+ExecStop=/usr/bin/${daemon_name} stop
+User=${srv_id}
+Group=${srv_id}
+
+[Install]
+WantedBy=multi-user.target
