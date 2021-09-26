@@ -6,8 +6,8 @@ After=local-fs.target network.target multi-user.target
 Type=forking
 ExecStart=/usr/bin/${daemon_name} start
 ExecStop=/usr/bin/${daemon_name} stop
-User=${srv_id}
-Group=${srv_id}
+User=${user_name}
+Group=${user_name}
 
 [Install]
 WantedBy=multi-user.target

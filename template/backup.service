@@ -5,8 +5,8 @@ After=local-fs.target
 [Service]
 Type=oneshot
 ExecStart=/usr/bin/${daemon_name} backup
-User=${srv_id}
-Group=${srv_id}
+User=${user_name}
+Group=${user_name}
 
 [Install]
 WantedBy=multi-user.target

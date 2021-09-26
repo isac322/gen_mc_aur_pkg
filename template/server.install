@@ -1,9 +1,8 @@
-_user="${srv_id}"
 _server_root="/srv/${srv_id}"
 
 
 post_install() {
-	echo "The world data is stored under ${_server_root} and the server runs as ${_user} user to increase security."
+	echo "The world data is stored under ${_server_root} and the server runs as ${user_name} user to increase security."
 	echo "Use the ${daemon_name} script under /usr/bin/ to start, stop or backup the server."
 	echo "Adjust the configuration file under /etc/conf.d/${srv_id} to your liking."
 	echo "For the server to start you have to accept the EULA in ${_server_root}/eula.txt !"
@@ -12,5 +11,5 @@ post_install() {
 
 post_remove() {
 	[ -d "$_server_root" ] && echo "Game saves in ${_server_root} were kept on your system."
-	echo "The ${_user} user was preserved on your system."
+	echo "The ${user_name} user was preserved on your system."
 }

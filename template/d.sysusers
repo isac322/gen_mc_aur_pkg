@@ -1,1 +1,1 @@
-u ${srv_id} - "Minecraft ${mc_ver} ${srv_type} Server" /srv/${srv_id} /bin/bash
+u ${user_name} - "Minecraft ${mc_ver} ${srv_type} Server" /srv/${srv_id} /bin/bash
